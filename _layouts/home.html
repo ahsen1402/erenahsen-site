@@ -29,19 +29,19 @@
 
     <section class="section latest-research">
       <div class="section-label">Latest Research</div>
-      <div class="research-news-grid">
-        {% assign latest_posts = site.posts | sort: 'date' | reverse %}
-        {% for post in latest_posts limit:3 %}
-        <article class="research-news-card">
-          <div class="research-news-date">{{ post.date | date: "%B %Y" }}</div>
-          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-          <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 240 }}</p>
-          <a class="research-news-link" href="{{ post.url | relative_url }}">Read more <span aria-hidden="true">&#8594;</span></a>
-        </article>
-        {% endfor %}
-      </div>
-      <div class="latest-research-footer">
-        <a class="btn btn-secondary" href="{{ '/news/' | relative_url }}">View all publication news <span aria-hidden="true">&#8594;</span></a>
+      <div class="research-feature">
+        <div class="research-visual" aria-hidden="true">
+          <div class="node n1"></div><div class="node n2"></div><div class="node n3"></div><div class="node n4"></div><div class="node n5"></div>
+          <div class="bar b1"></div><div class="bar b2"></div><div class="bar b3"></div>
+          <div class="connector c1"></div><div class="connector c2"></div><div class="connector c3"></div><div class="connector c4"></div>
+        </div>
+        <div class="research-copy">
+          <div class="eyebrow">RECENT PUBLICATION</div>
+          <h2>Individual Versus Institutional Philanthropy: Crowdfunding During Crises</h2>
+          <p class="research-meta">Journal of Applied Business and Economics</p>
+          <p>Our recent paper examines how individual and institutional donors respond differently when a crisis changes the demand for resources, highlighting the importance of donor heterogeneity in crisis-time resource mobilization.</p>
+          <a href="https://doi.org/10.1177/10591478251390971">View publication <span aria-hidden="true">&#8594;</span></a>
+        </div>
       </div>
     </section>
 
@@ -60,8 +60,8 @@
         <div class="section-label">Explore</div>
         <a href="{{ '/about-me/' | relative_url }}"><strong>About Me</strong><span>Learn more about my background and experience</span></a>
         <a href="{{ '/research/' | relative_url }}"><strong>Publications</strong><span>Browse my publications and working papers</span></a>
-        <a href="{{ '/news/' | relative_url }}"><strong>Publication News</strong><span>See all publication announcements and research updates</span></a>
         <a href="{{ '/teaching/' | relative_url }}"><strong>Teaching</strong><span>View courses, materials, and teaching philosophy</span></a>
+        <a href="{{ '/competitions/' | relative_url }}"><strong>Competitions</strong><span>Explore challenge and healthcare analytics projects</span></a>
       </div>
       <div class="connect-column">
         <div class="section-label">Connect</div>

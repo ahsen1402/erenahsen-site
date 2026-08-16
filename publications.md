@@ -2,12 +2,8 @@
 layout: single
 title: "Publications"
 permalink: /publications/
-author_profile: true
+author_profile: false
 ---
-
-# Publications
-
-My full publication list is organized on the [Research page]({{ '/research/' | relative_url }}). You can also find the most current list and paper links on [Google Scholar](https://scholar.google.com/citations?user=vFo_xZAAAAAJ&hl=tr&oi=ao).
 
 ## Selected recent work
 
@@ -19,3 +15,5 @@ My full publication list is organized on the [Research page]({{ '/research/' | r
 **COVID-19 test-to-stay program for K-12 schools: Opt-in versus opt-out consent model.** *iScience* (2024).
 
 **Modeling combination therapies in patient cohorts and cell cultures using correlated drug action.** *iScience* (2024).
+
+My full publication list is organized on the [Research page]({{ '/research/' | relative_url }}). You can also find the most current list and paper links on [Google Scholar](https://scholar.google.com/citations?user=vFo_xZAAAAAJ&hl=tr&oi=ao).
