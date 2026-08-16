@@ -6,7 +6,7 @@ permalink: /research/
 
 # Research
 
-This page lists my publications. For a more updated list and/or the links for the papers, please visit my [Google Scholar page](https://scholar.google.com/citations?user=vFo_xZAAAAAJ&hl=tr&oi=ao).
+This page lists my publications. For a more updated list and/or links for the papers, please visit my [Google Scholar page](https://scholar.google.com/citations?user=vFo_xZAAAAAJ&hl=tr&oi=ao).
 
 ## BOOKS
 
@@ -18,7 +18,7 @@ This page lists my publications. For a more updated list and/or the links for th
 2. A Secant Condition for Cyclic Systems with Time Delays, Ahsen ME, Hitay Ozbay, S-I Niculescu, *Time Delay Systems*, Springer Verlag (2017).
 3. Analysis of gene regulatory networks under positive feedback, Ahsen ME, Hitay Ozbay, S-I Niculescu, *Delay Systems*, Springer Verlag (2014).
 
-## Publications in Peer-Reviewed Journals
+## PUBLICATIONS IN PEER-REVIEWED JOURNALS
 
 1. Optimal Linear Ensemble of Binary Classifiers. Ahsen ME, Robert Vogel, Gustavo Stolovitzky. (2024). *Bioinformatics Advances*.
 2. [COVID-19 test-to-stay program for K-12 schools: Opt-in versus opt-out consent model](https://www.cell.com/). Anton Ivanov, (6 Authors), Ahsen ME, Sebastian Souyris. (2024), *iScience*.
@@ -46,7 +46,7 @@ This page lists my publications. For a more updated list and/or the links for th
 24. Radiogenomics Consortium Genome-Wide Association Study Meta-analysis of Late Toxicity after Prostate Cancer Radiotherapy, Kerns SL, (9 Authors), Ahsen ME, (27 Authors), *Journal of the National Cancer Institute* (2019).
 25. ExRNA Atlas analysis reveals distinct extracellular RNA cargo types present across human biofluids, Murillo OD, Thistlethwaite W, (19 Authors), Ahsen ME, (35 Authors), Milosavljevic A, *Cell* (2019).
 26. An Approach to One-Bit Compressed Sensing Based on Probably Approximately Correct Learning Theory, Ahsen ME, Vidyasagar M, *Journal of Machine Learning* (2019).
-27. Integrated nanoscale deterministic lateral displacement arrays for separation of extracellular vesicles from clinically-relevant volumes of biological samples, Smith J, Wunsch B and Dogra N and Ahsen ME et. al., *Lab on a Chip* (2018).
+27. Integrated nanoscale deterministic lateral displacement arrays for separation of extracellular vesicles from clinically-relevant volumes of biological samples, Smith J, Wunsch B and Dogra N and Ahsen ME et al., *Lab on a Chip* (2018).
 28. When Algorithmic Predictions Use Human-Generated Data: A Bias-Aware Classification Algorithm for Breast Cancer Diagnosis, Ahsen ME, Ayvaci MUS, Raghunathan S, *Information Systems Research* (In Press).
 29. A crowdsourced analysis to identify ab initio molecular signatures predictive of susceptibility to viral infection, Slim Fourati, (7 Authors), Ahsen ME et al., *Nature Communications* (In Press).
 30. Preference-Sensitive Management of Post-Mammography Decisions in Breast Cancer Diagnosis, Ayvaci MUS, Alagoz O, Ahsen ME, Burnside ES, *Production and Operations Management* (2018).
@@ -61,6 +61,19 @@ This page lists my publications. For a more updated list and/or the links for th
 39. Mixing Coefficients between discrete and real random variables: Computation and Properties, Ahsen ME, Mathukumalli Vidyasagar, *IEEE Transactions on Automatic Control* (2014).
 40. On the analysis of a dynamical model representing gene regulatory networks under negative feedback, Ahsen ME, Hitay Ozbay, S-I Niculescu, *International Journal of Robust and Nonlinear Control* (2014).
 
-## Publications in Peer-Reviewed Conference Proceedings
+## PUBLICATIONS IN PEER-REVIEWED CONFERENCE PROCEEDINGS
 
-The current WordPress page continues with the conference-proceedings section below the journal list. This section will be completed in the next migration pass after preserving the exact current entries.
+1. When Machines Will Take Over? Algorithms for Human-Machine Collaborative Decision Making in Healthcare. Ahsen ME, Mehmet Ulvi Saygi Ayvaci, Radha Mookerjee. (2024). *Proceedings of the 56th Annual Hawaii International Conference on System Sciences*.
+2. NeTFactor, a framework for identifying transcriptional regulators of gene expression-based biomarkers. Ahsen ME, Yoojin Chun, Alexander Grishin, Galina Grishina, Gustavo Stolovitzky, Gaurav Pandey, Supinda Bunyavanich. (2020). *Proceedings of the 11th ACM International Conference on Bioinformatics, Computational Biology and Health Informatics*.
+3. Modelling drug response and resistance in cancer: Opportunities and challenges, Niharika Challapalli, Ahsen ME, Mathukumalli Vidyasagar. *Proceedings of the IEEE 55rd Annual Conference on Decision and Control (CDC)* (2016).
+4. A Secant Condition for Cyclic Systems with Time Delays and its Application to Gene Regulatory Networks, Ahsen ME, Hitay Ozbay, S-I Niculescu. *Proceedings of the 12th IFAC Workshop on Time Delay Systems* (2015).
+5. A PAC learning approach to One-Bit Compressed Sensing, Ahsen ME, Mathukumalli Vidyasagar. *Proceedings of the 2015 American Control Conference (ACC)* (2015).
+6. An Approach to one-bit compressed sensing based on probably approximately correct learning theory, Ahsen ME, Mathukumalli Vidyasagar. *Proceedings of the IEEE 54rd Annual Conference on Decision and Control (CDC)* (2015).
+7. Optimized prediction of extreme treatment outcomes in ovarian cancer, Burook Misganaw, Ahsen ME et. al. *Proceedings of the IEEE 54rd Annual Conference on Decision and Control (CDC)* (2015).
+8. Near-ideal behavior of some compressed sensing algorithms, Ahsen ME, M Vidyasagar. *Proceedings of the 2014 European Control Conference (ECC)* (2014).
+9. Opportunistic wireless charging for mobile social and sensor networks, Eyuphan Bulut, Ahsen ME, Boleslaw K Szymanski. *Proceedings of the 2014 Globecom Workshop* (2014).
+10. On the computation of mixing coefficients between discrete-valued random variables, Ahsen ME, M Vidyasagar. *Proceedings of the 2013 Asian Control Conference (ASCC)* (2013).
+11. A novel application of mixing coefficients for reverse-engineering gene interaction networks, Nitin Singh, Ahsen ME, Shiva Mankala, M Vidyasagar, Michael A White. *Proceedings of the 50th Annual Allerton Conference on Communication, Control, and Computing* (2013).
+12. Stability analysis of a dynamical model representing gene regulatory networks, Ahsen ME, Hitay Ozbay, Silviu-Iulian Niculescu. *Proceedings of the 10th IFAC workshop on Time Delay Systems* (2012).
+13. Inferring weighted and directed gene interaction networks from gene expression data using the phi-mixing coefficient, Nitin Singh, Ahsen ME, Shiva Mankala, M Vidyasagar, Michael White. *Proceedings of the 2012 IEEE International Workshop on Genomic Signal Processing and Statistics (GENSIPS)* (2012).
+14. A new feature selection algorithm for two-class classification problems and application to endometrial cancer, Ahsen ME, Nitin Kumar Singh, Todd Boren, M Vidyasagar, Michael A White. *Proceedings of the IEEE 51st Annual Conference on Decision and Control (CDC)* (2012).
