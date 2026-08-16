@@ -29,19 +29,27 @@
 
     <section class="section latest-research">
       <div class="section-label">Latest Research</div>
-      <div class="research-feature">
-        <div class="research-visual" aria-hidden="true">
-          <div class="node n1"></div><div class="node n2"></div><div class="node n3"></div><div class="node n4"></div><div class="node n5"></div>
-          <div class="bar b1"></div><div class="bar b2"></div><div class="bar b3"></div>
-          <div class="connector c1"></div><div class="connector c2"></div><div class="connector c3"></div><div class="connector c4"></div>
-        </div>
-        <div class="research-copy">
-          <div class="eyebrow">RECENT PUBLICATION</div>
-          <h2>Individual Versus Institutional Philanthropy: Crowdfunding During Crises</h2>
-          <p class="research-meta">Journal of Applied Business and Economics</p>
-          <p>Our recent paper examines how individual and institutional donors respond differently when a crisis changes the demand for resources, highlighting the importance of donor heterogeneity in crisis-time resource mobilization.</p>
-          <a href="https://doi.org/10.1177/10591478251390971">View publication <span aria-hidden="true">&#8594;</span></a>
-        </div>
+      <div class="research-list">
+        {% assign research_posts = site.posts | where_exp: "post", "post.categories contains 'research'" %}
+        {% for post in research_posts limit: 3 %}
+        <article class="research-card">
+          <div class="research-visual" aria-hidden="true">
+            <div class="node n1"></div><div class="node n2"></div><div class="node n3"></div><div class="node n4"></div><div class="node n5"></div>
+            <div class="bar b1"></div><div class="bar b2"></div><div class="bar b3"></div>
+            <div class="connector c1"></div><div class="connector c2"></div><div class="connector c3"></div><div class="connector c4"></div>
+          </div>
+          <div class="research-copy">
+            <div class="eyebrow">RECENT PUBLICATION</div>
+            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+            {% if post.date %}<p class="research-meta">{{ post.date | date: "%B %-d, %Y" }}</p>{% endif %}
+            <p>{{ post.excerpt | strip_html | truncate: 220 }}</p>
+            <a href="{{ post.url | relative_url }}">Read publication <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+      <div class="research-news-link">
+        <a href="{{ '/news/' | relative_url }}">View all publication news <span aria-hidden="true">&#8594;</span></a>
       </div>
     </section>
 
