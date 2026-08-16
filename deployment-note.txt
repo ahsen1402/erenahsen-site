@@ -1,0 +1,1 @@
+Removed obsolete homepage transformation workflow; deployment now uses the current homepage files directly.
