@@ -2,14 +2,8 @@
 layout: single
 classes: wide
 permalink: /
-author_profile: true
+author_profile: false
 ---
-
-# Mehmet Eren Ahsen
-
-Assistant Professor, Gies College of Business, University of Illinois Urbana-Champaign.
-
-My research sits at the intersection of **machine learning, healthcare, information systems, and operations**. I develop and apply data-driven methods to problems in healthcare and society, with interests in machine learning, causal inference, computational biology, and decision support.
 
 ## Featured research
 
@@ -21,6 +15,7 @@ Our recent paper studies how individual and institutional donors respond when a 
 
 ## Explore the site
 
+- [About Me]({{ '/about-me/' | relative_url }})
 - [Research]({{ '/research/' | relative_url }})
 - [Software]({{ '/software/' | relative_url }})
 - [Teaching]({{ '/teaching/' | relative_url }})
