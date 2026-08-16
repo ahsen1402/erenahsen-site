@@ -1,0 +1,69 @@
+name: Update Research Publications
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/update-research-publications.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Update research publication lists
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('research.md')
+          s = p.read_text()
+
+          journal_marker = '## PUBLICATIONS IN PEER-REVIEWED JOURNALS\n\n'
+          new_journals = '''1. [Will machines take over? Algorithms for human–machine collaborative decision making in healthcare](https://doi.org/10.1177/10591478261443194). Ahsen ME, Mookerjee R, Ayvaci MUS. (2026). *Production and Operations Management*. Advance online publication.\n2. [Individual Versus Institutional Philanthropy: Crowdfunding During Crises](https://doi.org/10.1177/10591478251390971). Garimella A, Wu A, Subramanyam R, Ahsen ME. (2026). *Production and Operations Management*, 35(5), 1747–1765.\n3. [Economics of AI and human task sharing for decision making in screening mammography](https://doi.org/10.1038/s41467-025-57409-1). Ahsen ME, Ayvaci MUS, Mookerjee R, Stolovitzky G. (2025). *Nature Communications*, 16, 2289.\n4. [Investigating the role of AI explanations in lay individuals’ comprehension of radiology reports: A metacognition lens](https://doi.org/10.1371/journal.pone.0321342). Genc Y, Ahsen ME, Zhang Z. (2025). *PLOS One*, 20(9), e0321342.\n5. [Harnessing Unsupervised Ensemble Learning for Biomedical Applications: A Review of Methods and Advances](https://doi.org/10.3390/math13030420). Ahsen ME. (2025). *Mathematics*, 13(3), 420.\n6. [Leveraging Social Media for COVID-19 Response: Insights from a Data Competition](https://doi.org/10.1561/0200000116-7). Ahsen ME, Khandelwal A, Subramanyam R, Ivanov A, Sumkin D, Mukherjee UK, Seshadri S. (2025). *Foundations and Trends in Technology, Information and Operations Management*, 19(2), 299–316.\n7. [Risk-Stratified Screening: A Simulation Study of Scheduling Templates on Daily Mammography Recalls](https://doi.org/10.1016/j.jacr.2024.12.010). Lin Y, Hoyt AC, Manuel VG, Inkelas M, Ayvaci MUS, Ahsen ME, Hsu W. (2025). *Journal of the American College of Radiology*, 22(3), 297–306.\n'''
+          if 'Will machines take over? Algorithms for human–machine collaborative decision making in healthcare' not in s:
+              s = s.replace(journal_marker, journal_marker + new_journals)
+              # Renumber pre-existing journal entries from 1..40 to 8..47.
+              start = s.index(journal_marker) + len(journal_marker) + len(new_journals)
+              end = s.index('\n## PUBLICATIONS IN PEER-REVIEWED CONFERENCE PROCEEDINGS', start)
+              block = s[start:end]
+              lines = block.splitlines()
+              out=[]
+              for line in lines:
+                  import re
+                  m=re.match(r'^(\d+)\. (.*)$', line)
+                  if m:
+                      line=f'{int(m.group(1))+7}. {m.group(2)}'
+                  out.append(line)
+              s=s[:start]+'\n'.join(out)+s[end:]
+
+          conf_marker = '## PUBLICATIONS IN PEER-REVIEWED CONFERENCE PROCEEDINGS\n\n'
+          new_conf = '''1. [Modeling workflow, operational, and financial implications of AI-enabled same-day diagnostic follow-up for screening mammograms](https://experts.illinois.edu/en/persons/mehmet-eren-ahsen/). Lin Y, Hoyt AC, Capiro NM, Linden O, Zhuang L, Ayvaci MUS, Ahsen ME, Shih YCT, Hsu W. (2026). *Medical Imaging 2026: Imaging Informatics, Proceedings of SPIE*, Vol. 13930, 139300T.\n2. [Leveraging Generative AI for Interpretable Clinical Decision Making Through Causal Graphs](https://doi.org/10.1142/9789819824755_0022). Ahsen ME, Kittani R, Gerke T, Krishnan L, Rogan S, Scott ER. (2026). *Pacific Symposium on Biocomputing*, 31, 309–323.\n3. [Expert Detection on Crowdsourcing Forums via Sheaf Laplacian](https://dsaa.ieee.org/2025/technical-program/). Aktas ME, Moradi I, Cosar IM, Goyal Y, Alyaz A, Akbas E, Ahsen ME. (2025). *2025 IEEE 12th International Conference on Data Science and Advanced Analytics (DSAA)*.\n'''
+          if 'Expert Detection on Crowdsourcing Forums via Sheaf Laplacian' not in s:
+              s = s.replace(conf_marker, conf_marker + new_conf)
+              start = s.index(conf_marker) + len(conf_marker) + len(new_conf)
+              block=s[start:]
+              lines=block.splitlines()
+              out=[]
+              import re
+              for line in lines:
+                  m=re.match(r'^(\d+)\. (.*)$', line)
+                  if m:
+                      line=f'{int(m.group(1))+3}. {m.group(2)}'
+                  out.append(line)
+              s=s[:start]+'\n'.join(out)
+
+          # Correct the HICSS year: the proceedings record is 2023, not 2024.
+          s=s.replace('(2024). *Proceedings of the 56th Annual Hawaii International Conference on System Sciences*.', '(2023). *Proceedings of the 56th Annual Hawaii International Conference on System Sciences*.')
+          p.write_text(s)
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research.md
+          git diff --cached --quiet && exit 0
+          git commit -m "Update research publication list through 2026"
+          git push
