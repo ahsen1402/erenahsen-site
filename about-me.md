@@ -5,8 +5,6 @@ title: "About Me"
 permalink: /about-me/
 ---
 
-# About Me
-
 I am **Mehmet Eren Ahsen**, an Assistant Professor in the Gies College of Business at the University of Illinois Urbana-Champaign. I am also a **Health Innovation Professor in Biomedical and Translational Sciences at the Carle Illinois College of Medicine**. This role brings together my interests in healthcare, artificial intelligence, medical decision-making, and interdisciplinary innovation.
 
 My research sits at the intersection of **machine learning, healthcare, information systems, and operations**. I develop and apply data-driven methods to help organizations and decision makers make better use of complex data, with a particular interest in healthcare, society, and high-stakes decision environments. My work brings together machine learning, causal inference, computational biology, and decision analytics, with an emphasis on problems where rigorous methods need to be combined with an understanding of the institutional and human context in which decisions are made.
