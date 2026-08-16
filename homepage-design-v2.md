@@ -1,0 +1,1 @@
+Homepage redesign reference applied: hero, latest research, research interests, explore/connect.
