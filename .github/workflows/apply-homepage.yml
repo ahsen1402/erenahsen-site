@@ -1,0 +1,33 @@
+name: Apply Homepage Design
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.event.head_commit.message != 'Apply homepage redesign'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Apply redesigned homepage
+        run: |
+          set -e
+          cp _layouts/home-v2.html _layouts/home.html
+          cp assets/css/home-v2.css assets/css/home.css
+          rm -f homepage-design-v2.md homepage-redesign-placeholder.txt homepage-redesign-source.md temp-home-design.txt DO_NOT_USE.txt README-temp.md PLACEHOLDER.txt final-note.txt x
+          rm -f _layouts/home-v2.html _layouts/home-v2.html.new _layouts/home-final.html _layouts/home-final.html.final _layouts/home-overwrite-request.txt
+          rm -f assets/css/home-v2.css assets/css/home-v2-copy.css assets/css/home-final.css assets/css/home.css.new assets/css/home.css.pending
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && exit 0
+          git commit -m "Apply homepage redesign"
+          git push
