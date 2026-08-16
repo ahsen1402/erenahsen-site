@@ -1,9 +1,10 @@
 title: "Eren’s Home Page"
 description: "Mehmet Eren Ahsen — research, publications, software, and teaching."
 url: "https://erenahsen.com"
-baseurl: ""
+baseurl: "/erenahsen-site"
 markdown: kramdown
 permalink: /:categories/:title/
 plugins: []
 exclude:
   - README.md
+  - "*.tmp"
