@@ -1,1 +1,0 @@
-Homepage redesign source is maintained in the custom Academic Pages home layout and stylesheet.
