@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: single
+author_profile: false
 title: "Is A + B = AB when combining multiple drugs?"
 date: 2020-12-02
 categories: research

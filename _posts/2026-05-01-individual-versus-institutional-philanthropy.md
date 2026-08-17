@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: single
+author_profile: false
 title: "Individual Versus Institutional Philanthropy: Crowdfunding During Crises"
 date: 2026-05-01
 categories: research

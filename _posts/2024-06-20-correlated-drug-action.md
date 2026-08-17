@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: single
+author_profile: false
 title: "A Fresh Look at Combination Therapy: Correlated Drug Action Models"
 date: 2024-06-20
 categories: research

@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: single
+author_profile: false
 title: "Paper Published in Nature Scientific Reports"
 date: 2019-09-12
 categories: research

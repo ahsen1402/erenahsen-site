@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: single
+author_profile: false
 title: "DREAM Malaria Challenge"
 date: 2019-08-23
 categories: research

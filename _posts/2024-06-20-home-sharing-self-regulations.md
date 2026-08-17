@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: single
+author_profile: false
 title: "The Impact of Home-Sharing Self-Regulations on Crime Rates"
 date: 2024-06-20
 categories: research

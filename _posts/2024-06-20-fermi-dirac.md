@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: single
+author_profile: false
 title: "A Quantum Leap in Binary Classification: Harnessing Fermi–Dirac Distributions"
 date: 2024-06-20
 categories: research
