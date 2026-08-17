@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: single
+author_profile: false
 title: Teaching
 permalink: /teaching/
 ---
