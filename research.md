@@ -69,7 +69,7 @@ This page lists my publications. For a more updated list and/or links for the pa
 45. Mixing Coefficients between discrete and real random variables: Computation and Properties, Ahsen ME, Mathukumalli Vidyasagar, *IEEE Transactions on Automatic Control* (2014).
 46. On the analysis of a dynamical model representing gene regulatory networks under negative feedback, Ahsen ME, Hitay Ozbay, S-I Niculescu, *International Journal of Robust and Nonlinear Control* (2014).
 
-## MANUSCRIPTS UNDER REVIEW
+## WORK IN PROGRESS
 
 47. **Ahsen, M. E.**, Ayvaci, M., Raghunathan, S., Subramanyam, R. *Contests for Predictive Algorithms: Ensembling, Interdependency, and Optimal Rewards Design.* Under review at *Production and Operations Management*.
 48. Aktas, M., **Ahsen, M. E.**, Moradi, I., Verkouteren, C., Sakhamuri, S., Sawadago, D., Cosar, I., Alyaz, A., Goyal, Y., & Akbas, E. *Subtopic-Aware Ranking via Sheaf Laplacian: A Unified Framework.* Under review at *INFORMS Journal on Computing*.
@@ -77,7 +77,6 @@ This page lists my publications. For a more updated list and/or links for the pa
 50. **Ahsen, M. E.**, Ayvaci, M., Hippe, D., Lotter, W., Milch, H., Hsu, W. *Improving the Performance of AI on Target Populations Using Custom Ensembles: Application in Screening Mammography.* Under review at *NPJ Digital Medicine*.
 51. Aktas, M., **Ahsen, M. E.**, Akbas, E. *Deception in Social Networks: Unveiling the Impact of Deception on Influence Maximization and Polarization.* Preparing for second-round review at *ACM Transactions on Social Computing*.
 
-## WORK IN PROGRESS
 
 52. **Ahsen, M. E.**, Ozeken, C., Ayvaci, M. *Enhancing Fairness and Accuracy in Mammography Screening Using a Custom Ensemble.*
 53. Hao, S., Souyris, S., **Ahsen, M. E.**, Xu, Y., Mukherjee, U. K., Seshadri, S., Ivanov, A. *Hotspots for Emerging Epidemics: Multi-Task and Transfer Learning over Mobility Networks.*
