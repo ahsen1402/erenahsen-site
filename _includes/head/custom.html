@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="{{ '/assets/css/page-layouts.css' | relative_url }}">
+<script>
+  (function () {
+    var targets = ['/research/', '/teaching/', '/software/', '/competitions/'];
+    if (targets.indexOf(window.location.pathname) !== -1) {
+      document.documentElement.classList.add('reserved-left-space');
+    }
+  }());
+</script>
