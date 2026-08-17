@@ -1,0 +1,1 @@
+Inline SVG social icons are ready in _includes/social-icons.html. Homepage will use that partial after the next commit.
