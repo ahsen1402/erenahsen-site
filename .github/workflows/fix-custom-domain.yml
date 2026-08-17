@@ -1,0 +1,55 @@
+name: Fix custom domain configuration
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update Jekyll configuration
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          p = Path('_config.yml')
+          text = p.read_text()
+          text = text.replace('url: "https://ahsen1402.github.io"', 'url: "https://erenahsen.com"')
+          text = text.replace('baseurl: "/erenahsen-site"', 'baseurl: ""')
+          p.write_text(text)
+
+          for name in [
+              '_config.custom-domain-backup.yml',
+              '_config-root-domain.yml',
+              '_config-root-domain.yml.final',
+              '_config.yml.correct',
+              '_config.yml.root-domain',
+              '_config.yml.tmp'
+          ]:
+              f = Path(name)
+              if f.exists():
+                  f.unlink()
+
+          Path('.github/workflows/fix-custom-domain.yml').unlink()
+          PY
+
+      - name: Commit and push
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Configure site for erenahsen.com [skip ci]"
+          git push origin main
