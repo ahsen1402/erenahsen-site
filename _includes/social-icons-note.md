@@ -1,0 +1,1 @@
+Homepage now has inline SVG social icons configured.
