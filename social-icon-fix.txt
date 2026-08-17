@@ -1,0 +1,1 @@
+Fixing homepage social icons with inline SVGs.
