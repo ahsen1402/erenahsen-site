@@ -1,0 +1,50 @@
+name: Fix Social Media Book Chapter
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fix-social-media-book-chapter.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Move publication to book chapters
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+          p = Path('research.md')
+          s = p.read_text()
+          entry = "[Leveraging Social Media for COVID-19 Response: Insights from a Data Competition](https://doi.org/10.1561/0200000116-7). Ahsen ME, Khandelwal A, Subramanyam R, Ivanov A, Sumkin D, Mukherjee UK, Seshadri S. (2025). *Foundations and Trends in Technology, Information and Operations Management*, 19(2), 299–316."
+          # Remove it from the journal list.
+          s = re.sub(r'^\d+\. ' + re.escape(entry) + r'\n', '', s, flags=re.M)
+          # Add it as the newest book chapter if not already there.
+          marker = '## BOOK CHAPTERS\n\n'
+          if marker + '1. ' + entry not in s:
+              s = s.replace(marker, marker + '1. ' + entry + '\n')
+          # Renumber numbered lists independently inside each section.
+          sections = re.split(r'(?=^## )', s, flags=re.M)
+          out = []
+          for sec in sections:
+              n = 0
+              lines = []
+              for line in sec.splitlines(True):
+                  if re.match(r'^\d+\. ', line):
+                      n += 1
+                      line = re.sub(r'^\d+\.', str(n) + '.', line)
+                  lines.append(line)
+              out.append(''.join(lines))
+          p.write_text(''.join(out))
+      - name: Commit correction
+        run: |
+          git config user.name "ahsen1402"
+          git config user.email "erenahsen@yahoo.com"
+          git add research.md
+          git commit -m "Move social media publication to book chapters" || exit 0
+          git push
