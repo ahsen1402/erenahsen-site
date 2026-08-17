@@ -1,0 +1,43 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body>
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+
+    {% assign reserved_pages = '/research/;/teaching/;/software/;/competitions/' | split: ';' %}
+    {% if reserved_pages contains page.url %}
+      <div class="secondary-page-shell" id="main" role="main">
+        <div class="secondary-page-spacer" aria-hidden="true"></div>
+        <article class="page secondary-page">
+          <div class="page__inner-wrap">
+            <section class="page__content" itemprop="text">
+              {{ content }}
+            </section>
+          </div>
+        </article>
+      </div>
+    {% else %}
+      {{ content }}
+    {% endif %}
+
+    <div class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include footer.html %}
+      </footer>
+    </div>
+
+    {% include scripts.html %}
+  </body>
+</html>

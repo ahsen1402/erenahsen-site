@@ -1,13 +1,40 @@
 @media (min-width: 1025px) {
-  html.reserved-left-space .page {
-    max-width: 980px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 180px;
+  .secondary-page-shell {
+    width: min(1200px, calc(100vw - 80px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    column-gap: 40px;
+    align-items: start;
+  }
+
+  .secondary-page-spacer {
+    min-height: 1px;
+  }
+
+  .secondary-page {
+    width: auto !important;
+    max-width: 980px !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 }
+
 @media (max-width: 1024px) {
-  html.reserved-left-space .page {
-    padding-left: 0;
+  .secondary-page-shell {
+    width: auto;
+    margin: 0;
+    display: block;
+  }
+
+  .secondary-page-spacer {
+    display: none;
+  }
+
+  .secondary-page {
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 }
