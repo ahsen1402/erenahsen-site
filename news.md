@@ -5,8 +5,6 @@ permalink: /news/
 author_profile: false
 ---
 
-# Publication News
-
 A running collection of research and publication news. New entries are added automatically from the site's publication posts.
 
 {% for post in site.posts %}
