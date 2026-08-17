@@ -4,3 +4,21 @@
   .page__content > h1:first-child { display: none; }
 </style>
 {% endif %}
+
+{% if page.categories contains 'research' and page.url != '/research/' %}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.greedy-nav a').forEach(function (link) {
+      var href = link.getAttribute('href') || '';
+      if (href.indexOf('/research/') !== -1) {
+        link.parentElement.classList.remove('active');
+        link.removeAttribute('aria-current');
+      }
+      if (href.indexOf('/news/') !== -1) {
+        link.parentElement.classList.add('active');
+        link.setAttribute('aria-current', 'page');
+      }
+    });
+  });
+</script>
+{% endif %}
