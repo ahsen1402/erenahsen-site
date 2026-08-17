@@ -12,13 +12,23 @@
       var href = link.getAttribute('href') || '';
       if (href.indexOf('/research/') !== -1) {
         link.parentElement.classList.remove('active');
+        link.parentElement.classList.remove('selected');
         link.removeAttribute('aria-current');
       }
       if (href.indexOf('/news/') !== -1) {
         link.parentElement.classList.add('active');
+        link.parentElement.classList.add('selected');
         link.setAttribute('aria-current', 'page');
       }
     });
   });
 </script>
 {% endif %}
+
+<style>
+  .greedy-nav .selected > a,
+  .greedy-nav .active > a {
+    pointer-events: auto !important;
+    cursor: pointer;
+  }
+</style>
