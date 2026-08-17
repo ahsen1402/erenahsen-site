@@ -1,1 +1,6 @@
-<!-- Custom head overrides intentionally empty. Secondary pages use the standard Academic Pages layout. -->
+<!-- Custom head overrides for the Academic Pages site. -->
+{% if page.url == '/research/' or page.url == '/teaching/' or page.url == '/software/' or page.url == '/competitions/' %}
+<style>
+  .page__content > h1:first-child { display: none; }
+</style>
+{% endif %}
