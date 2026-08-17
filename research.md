@@ -68,6 +68,23 @@ This page lists my publications. For a more updated list and/or links for the pa
 44. Optimized Prediction of Extreme Treatment Outcomes in Ovarian Cancer, Burook Misganaw, Ahsen ME et al., *Cancer Informatics* (2015).
 45. Mixing Coefficients between discrete and real random variables: Computation and Properties, Ahsen ME, Mathukumalli Vidyasagar, *IEEE Transactions on Automatic Control* (2014).
 46. On the analysis of a dynamical model representing gene regulatory networks under negative feedback, Ahsen ME, Hitay Ozbay, S-I Niculescu, *International Journal of Robust and Nonlinear Control* (2014).
+
+## MANUSCRIPTS UNDER REVIEW
+
+47. **Ahsen, M. E.**, Ayvaci, M., Raghunathan, S., Subramanyam, R. *Contests for Predictive Algorithms: Ensembling, Interdependency, and Optimal Rewards Design.* Under review at *Production and Operations Management*.
+48. Aktas, M., **Ahsen, M. E.**, Moradi, I., Verkouteren, C., Sakhamuri, S., Sawadago, D., Cosar, I., Alyaz, A., Goyal, Y., & Akbas, E. *Subtopic-Aware Ranking via Sheaf Laplacian: A Unified Framework.* Under review at *INFORMS Journal on Computing*.
+49. Lin, Y., **Ahsen, M. E.**, Ayvaci, M., Hsu, W. *Using Discrete Event Simulation to Design and Assess an AI-Aided Workflow.* Under second-round review at *Nature Communications*.
+50. **Ahsen, M. E.**, Ayvaci, M., Hippe, D., Lotter, W., Milch, H., Hsu, W. *Improving the Performance of AI on Target Populations Using Custom Ensembles: Application in Screening Mammography.* Under review at *NPJ Digital Medicine*.
+51. Aktas, M., **Ahsen, M. E.**, Akbas, E. *Deception in Social Networks: Unveiling the Impact of Deception on Influence Maximization and Polarization.* Preparing for second-round review at *ACM Transactions on Social Computing*.
+
+## WORK IN PROGRESS
+
+52. **Ahsen, M. E.**, Ozeken, C., Ayvaci, M. *Enhancing Fairness and Accuracy in Mammography Screening Using a Custom Ensemble.*
+53. Hao, S., Souyris, S., **Ahsen, M. E.**, Xu, Y., Mukherjee, U. K., Seshadri, S., Ivanov, A. *Hotspots for Emerging Epidemics: Multi-Task and Transfer Learning over Mobility Networks.*
+54. **Ahsen, M. E.**, Javadi, M., Ayvaci, M. *Optimizing Algorithmic Investments: An Economic Perspective on Multi-Algorithm Procurement.*
+55. **Ahsen, M. E.**, Ayvaci, M., Raghunathan, S. *Role of Intrinsic Motivation in Algorithmic Competitions.*
+56. **Ahsen, M. E.**, Genc, Y. *Designing Hybrid Decision Systems for Human-AI Delegation.*
+
 ## PUBLICATIONS IN PEER-REVIEWED CONFERENCE PROCEEDINGS
 
 1. [Modeling workflow, operational, and financial implications of AI-enabled same-day diagnostic follow-up for screening mammograms](https://experts.illinois.edu/en/persons/mehmet-eren-ahsen/). Lin Y, Hoyt AC, Capiro NM, Linden O, Zhuang L, Ayvaci MUS, Ahsen ME, Shih YCT, Hsu W. (2026). *Medical Imaging 2026: Imaging Informatics, Proceedings of SPIE*, Vol. 13930, 139300T.
