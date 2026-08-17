@@ -11,7 +11,7 @@ permalink: /competitions/
 - [Fourth Midwest Healthcare Conference Causal Diagram Challenge](/competitions/midwest-healthcare-conference-causal-diagram-challenge-estimating-causal-effects-of-glucocorticoids-on-covid-19-survival/)
 
 - [ICGC-TCGA DREAM Somatic Mutation Calling in RNA (SMC-RNA) Challenge](https://www.cell.com/cell-systems/fulltext/S2405-4712(21)00207-6)
-- [Parkinson’s Disease Digital Biomarker DREAM Challenge](https://www.thelancet.com/journals/ebiom/article/PIIS2352-3964(21)00068-2/fulltext)
+- [Deep Learning Epilepsy Detection Challenge](https://www.thelancet.com/journals/ebiom/article/PIIS2352-3964(21)00068-2/fulltext)
 - [DREAM Single-Cell Transcriptomics Challenge](https://www.life-science-alliance.org/content/3/11/e202000867)
 - [Digital Mammography DREAM Challenge](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2761795)
 - [Disease Module Identification DREAM Challenge](https://www.nature.com/articles/s41592-019-0509-5)
