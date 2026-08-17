@@ -9,80 +9,34 @@
 <body class="home-page">
   {% include browser-upgrade.html %}
   {% include masthead.html %}
-
   <main>
     <section class="hero redesigned-hero">
-      <div class="hero-media">
-        <img src="{{ '/images/eren.jpeg' | relative_url }}" alt="Mehmet Eren Ahsen">
-      </div>
+      <div class="hero-media"><img src="{{ '/images/eren.jpeg' | relative_url }}" alt="Mehmet Eren Ahsen"></div>
       <div class="hero-copy">
-        <div class="accent-line"></div>
-        <h1>Mehmet Eren Ahsen</h1>
+        <div class="accent-line"></div><h1>Mehmet Eren Ahsen</h1>
         <p class="hero-lead">I develop and apply data-driven methods at the intersection of <strong>machine learning, healthcare, information systems, and operations</strong> to solve important problems in healthcare and society.</p>
         <p>My work leverages machine learning, causal inference, computational biology, and decision support to generate insights and build tools that inform better decisions and improve outcomes.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="{{ '/about-me/' | relative_url }}">About Me</a>
-          <a class="btn btn-secondary" href="{{ '/research/' | relative_url }}">Research <span aria-hidden="true">&#8594;</span></a>
-        </div>
+        <div class="hero-actions"><a class="btn btn-primary" href="{{ '/about-me/' | relative_url }}">About Me</a><a class="btn btn-secondary" href="{{ '/research/' | relative_url }}">Research <span aria-hidden="true">&#8594;</span></a></div>
       </div>
     </section>
-
     <section class="section latest-research">
       <div class="section-label">Latest Research</div>
       <div class="research-list">
         {% assign research_posts = site.posts | where_exp: "post", "post.categories contains 'research'" %}
         {% for post in research_posts limit: 3 %}
-        <article class="research-card">
-          <div class="research-visual" aria-hidden="true">
-            <div class="node n1"></div><div class="node n2"></div><div class="node n3"></div><div class="node n4"></div><div class="node n5"></div>
-            <div class="bar b1"></div><div class="bar b2"></div><div class="bar b3"></div>
-            <div class="connector c1"></div><div class="connector c2"></div><div class="connector c3"></div><div class="connector c4"></div>
-          </div>
-          <div class="research-copy">
-            <div class="eyebrow">RECENT PUBLICATION</div>
-            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-            {% if post.date %}<p class="research-meta">{{ post.date | date: "%B %-d, %Y" }}</p>{% endif %}
-            <p>{{ post.excerpt | strip_html | truncate: 220 }}</p>
-            <a href="{{ post.url | relative_url }}">Read publication <span aria-hidden="true">&#8594;</span></a>
-          </div>
+        <article class="research-card"><div class="research-visual" aria-hidden="true"><div class="node n1"></div><div class="node n2"></div><div class="node n3"></div><div class="node n4"></div><div class="node n5"></div><div class="bar b1"></div><div class="bar b2"></div><div class="bar b3"></div><div class="connector c1"></div><div class="connector c2"></div><div class="connector c3"></div><div class="connector c4"></div></div>
+          <div class="research-copy"><div class="eyebrow">RECENT PUBLICATION</div><h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>{% if post.date %}<p class="research-meta">{{ post.date | date: "%B %-d, %Y" }}</p>{% endif %}<p>{{ post.excerpt | strip_html | truncate: 220 }}</p><a href="{{ post.url | relative_url }}">Read publication <span aria-hidden="true">&#8594;</span></a></div>
         </article>
         {% endfor %}
       </div>
-      <div class="research-news-link">
-        <a href="{{ '/news/' | relative_url }}">View all publication news <span aria-hidden="true">&#8594;</span></a>
-      </div>
+      <div class="research-news-link"><a href="{{ '/news/' | relative_url }}">View all publication news <span aria-hidden="true">&#8594;</span></a></div>
     </section>
-
-    <section class="section interests">
-      <div class="section-label">Research Interests</div>
-      <div class="interest-grid">
-        <article class="interest-card"><div class="interest-icon blue">&#9672;</div><h3>Machine Learning</h3><p>Developing and applying machine learning methods for high-dimensional, complex data.</p></article>
-        <article class="interest-card"><div class="interest-icon orange">&#9829;</div><h3>Healthcare</h3><p>Building data-driven solutions to improve healthcare delivery, diagnosis, and outcomes.</p></article>
-        <article class="interest-card"><div class="interest-icon green">&#9679;</div><h3>Information Systems</h3><p>Designing and studying information systems that support data-driven decision-making.</p></article>
-        <article class="interest-card"><div class="interest-icon purple">&#9881;</div><h3>Operations</h3><p>Applying analytical and optimization methods to improve operations and decision processes.</p></article>
-      </div>
-    </section>
-
+    <section class="section interests"><div class="section-label">Research Interests</div><div class="interest-grid"><article class="interest-card"><div class="interest-icon blue">&#9672;</div><h3>Machine Learning</h3><p>Developing and applying machine learning methods for high-dimensional, complex data.</p></article><article class="interest-card"><div class="interest-icon orange">&#9829;</div><h3>Healthcare</h3><p>Building data-driven solutions to improve healthcare delivery, diagnosis, and outcomes.</p></article><article class="interest-card"><div class="interest-icon green">&#9679;</div><h3>Information Systems</h3><p>Designing and studying information systems that support data-driven decision-making.</p></article><article class="interest-card"><div class="interest-icon purple">&#9881;</div><h3>Operations</h3><p>Applying analytical and optimization methods to improve operations and decision processes.</p></article></div></section>
     <section class="section explore-connect">
-      <div class="explore-column">
-        <div class="section-label">Explore</div>
-        <a href="{{ '/about-me/' | relative_url }}"><strong>About Me</strong><span>Learn more about my background and experience</span></a>
-        <a href="{{ '/research/' | relative_url }}"><strong>Publications</strong><span>Browse my publications and working papers</span></a>
-        <a href="{{ '/teaching/' | relative_url }}"><strong>Teaching</strong><span>View courses, materials, and teaching philosophy</span></a>
-        <a href="{{ '/competitions/' | relative_url }}"><strong>Competitions</strong><span>Explore challenge and healthcare analytics projects</span></a>
-      </div>
-      <div class="connect-column">
-        <div class="section-label">Connect</div>
-        <p>Let’s connect and collaborate.</p>
-        <div class="connect-links">
-          <a href="{{ site.author.googlescholar }}" aria-label="Google Scholar">GS</a>
-          <a href="https://github.com/{{ site.author.github }}" aria-label="GitHub">GH</a>
-        </div>
-      </div>
+      <div class="explore-column"><div class="section-label">Explore</div><a href="{{ '/about-me/' | relative_url }}"><strong>About Me</strong><span>Learn more about my background and experience</span></a><a href="{{ '/research/' | relative_url }}"><strong>Publications</strong><span>Browse my publications and working papers</span></a><a href="{{ '/teaching/' | relative_url }}"><strong>Teaching</strong><span>View courses, materials, and teaching philosophy</span></a><a href="{{ '/competitions/' | relative_url }}"><strong>Competitions</strong><span>Explore challenge and healthcare analytics projects</span></a></div>
+      <div class="connect-column"><div class="section-label">Connect</div><p>Let’s connect and collaborate.</p><div class="connect-links" aria-label="Social and academic profiles"><a href="{{ site.author.googlescholar }}" aria-label="Google Scholar" title="Google Scholar"><i class="fab fa-google-scholar" aria-hidden="true"></i></a><a href="https://github.com/{{ site.author.github }}" aria-label="GitHub" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a><a href="https://www.linkedin.com/in/ahsenme/" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></div></div>
     </section>
   </main>
-
-  {% include footer.html %}
-  {% include scripts.html %}
+  {% include footer.html %}{% include scripts.html %}
 </body>
 </html>
